@@ -1,6 +1,6 @@
-# from django.urls import path
-# from .views import MenuitemListView
+from django.urls import path
+from .views import MenuitemListView
 
-# urlpatterns = [
-#     path('', MenuitemListView.as_view(),name="Menu")
-# ]
+urlpatterns = [
+    path('', MenuitemListView.as_view(),name="Menu")
+]

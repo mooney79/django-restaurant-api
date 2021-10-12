@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-ly65q6l^(=oo9-qf#+h5gz@-o-kb9znb(mmgga@8x(!@veq_!r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-restaurant-api-mooney79.herokuapp.com', '127.0.0.1',]
+ALLOWED_HOSTS = ['django-restaurant-api-mooney79.herokuapp.com', '127.0.0.1']
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -41,15 +42,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd Party
-     'rest_framework',
+    "corsheaders",
+    'rest_framework',
 
 
     #Local
     'api.apps.ApiConfig',
     'menuitems.apps.MenuitemsConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

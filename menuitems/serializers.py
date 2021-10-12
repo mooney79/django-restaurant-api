@@ -4,4 +4,4 @@ from .models import Menuitem
 class MenuitemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Menuitem
-        fields = ('id', 'name', 'category', 'price')
+        fields = ('id', 'name', 'category', 'priceCents', 'priceStr')

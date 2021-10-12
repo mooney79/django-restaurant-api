@@ -8,6 +8,7 @@ class MenuitemListAPIView(generics.ListAPIView):
     queryset=Menuitem.objects.all()   
     serializer_class = MenuitemSerializer
 
+
 # class MenuitemListView(generics.ListView):
 #     model = Menuitem
     # queryset=Menuitem.objects.all()

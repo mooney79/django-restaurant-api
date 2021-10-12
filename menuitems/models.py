@@ -5,7 +5,8 @@ from django.db import models
 class Menuitem(models.Model):
     name = models.CharField(max_length=255)
     category = models.CharField(max_length=255)
-    price = models.PositiveIntegerField()
+    priceCents = models.PositiveIntegerField()
+    priceStr = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
